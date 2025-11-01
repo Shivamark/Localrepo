@@ -1,3 +1,39 @@
-p {
-    color: red;
+
+
+* {
+    font-family: 'Lucida Sans';
+}
+
+
+h1 {
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#outer{
+    font-size: 25px;
+}
+
+#inner{
+    font-size: 16px;
+}
+
+#navbar {
+    height: 60px;
+    background-color: #0f1111;
+    color: white;
+}
+
+button{
+    background-color: #dcd109;
+}
+#logo{
+    color: #dcd109;
+    font-size: 25px;
+}
+a{
+    margin-right: 200px;
+    color: aliceblue;
+    text-decoration: none;
 }
