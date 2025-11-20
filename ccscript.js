@@ -44,29 +44,17 @@ const updateExchangeRate = async () => {
     // Fetch UPI code //
 
     const URL = `${BASE_URL}/${fromCurr.value.toUpperCase()}`;
-    //const URL = BASE_URL;
+   
     let response = await fetch (URL);
     let data = await response.json();
-    let convertRate = data.conversion_rates;
-    let destCur = toCurr.value;
-   // let data = await response.conversion_rates;
+   // let convertRate = data.conversion_rates;
+   
+  
 
-     //console.log(response.conversion_rates(INR));
-    
-   // let rate = data[toCurr.conversion_rates.toUpperCase()];
-    // console.log(data[fromCurr.conversion_rates.toUpperCase()]);
-
-   //console.log("data.conversion_rates.",toCurr.value);
-
-    let rate = convertRate.INR;
-    //console.log(rate);
-
+    let rate = data.conversion_rates[toCurr.value];       // Very Important
     let finalAmount = amtVal * rate;
-    
-    //console.log(amtVal);
     msg.innerText = `${amtVal}${fromCurr.value} = ${finalAmount}${toCurr.value}`;
 };
-
 
 const updateFlag = (element) => {
     let currCode = element.value;
